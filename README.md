@@ -17,6 +17,7 @@ The following scripts demonstrate how to use the module for two simulation studi
 - **sim1_acrs.py** / **sim2_acrs.py**: Use the Actor-Critic + Random Shooting (AC+RS) methods in the respective simulations.
 - **sim1_fs.py** / **sim2_fs.py**: Use the Fixed-Sequence (FS) methods in the respective simulations.
 - **sim1_acrs.slurm**, **sim1_fs.slurm**, **sim2_acrs.slurm**, **sim2_fs.slurm**: SLURM scripts for submitting the corresponding Python scripts to a server or HPC cluster.
+- **sim_bbts.ipynb**: Compares the Beta-Bernoulli Thompson Sampling (BBTS) algorithm \[Ma et al., 2021\] with our methods.
 
 ## Results
 - The simulation scripts save their results as separate files in the **results/** folder:
@@ -26,3 +27,14 @@ The following scripts demonstrate how to use the module for two simulation studi
 
 ## Summaries and Figures
 - **summary.ipynb**: A Jupyter notebook that processes the simulation outputs from **results/sim1/** and **results/sim2/**, generating figures and tables similar to those in the manuscript’s simulation sections.
+
+## Python Environment
+
+The programming language used to reproduce this research is Python (Version 3.8.19). To ensure compatibility and reproducibility, we have frozen the Python environment used at the time of the research in the `requirements.txt` file. You can set up your environment with all the necessary packages by using this file:
+
+```bash
+pip install -r requirements.txt
+```
+
+**Reference**  
+Ma, T., Huggins, J. E., & Kang, J. (2021). *Adaptive sequence-based stimulus selection in an ERP-based brain-computer interface by Thompson sampling in a multi-armed bandit problem.* In *2021 IEEE International Conference on Bioinformatics and Biomedicine (BIBM)* (pp. 3648–3655). [IEEE](https://doi.org/10.1109/BIBM52615.2021.9669724).
